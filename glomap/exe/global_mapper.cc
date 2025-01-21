@@ -67,7 +67,7 @@ int RunMapper(int argc, char** argv) {
   std::unordered_map<image_t, Image> images;
   std::unordered_map<track_t, Track> tracks;
 
-  const colmap::Database database;
+  colmap::Database database;
   database.Open(database_path, true);  // open in readonly mode
   ConvertDatabaseToGlomap(database, view_graph, cameras, images);
 
